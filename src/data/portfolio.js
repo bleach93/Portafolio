@@ -103,7 +103,7 @@ export const projects = [{
         year: '2020',
         description: 'Sistema de inventario desarrollado con Java y MySQL.',
         stack: ['Java', 'MySQL'],
-        live: 'pdfs/Manual Tec.pdf',
+        live: 'pdfs/Manual Tecnico.pdf',
         github: 'https://github.com/bleach93/Inventario-',
         featured: true
     },
