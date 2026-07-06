@@ -22,7 +22,7 @@ export const stats = [
 export const projects = [{
         title: 'Real Estate Website System',
         category: 'Frontend',
-        image: 'public/images/projects/realestate.jpg',
+        image: '/images/projects/realestate.jpg',
         year: '2026',
         description: 'Template para inmobiliarias con secciones de propiedades, formularios de contacto, landing pages y enfoque SEO.',
         stack: ['React', 'Astro', 'CSS', 'SEO'],
@@ -33,7 +33,7 @@ export const projects = [{
     {
         title: 'Guesty API Dashboard',
         category: 'Automation, Frontend',
-        image: 'public/images/projects/calendar.png',
+        image: '/images/projects/calendar.png',
         year: '2022',
         description: 'Dashboard conceptual para consultar reservas, propiedades y reportes usando datos provenientes de una API externa usando la librería FullCalendar.',
         stack: ['JavaScript', 'REST API', 'Charts', 'CRM'],
@@ -44,7 +44,7 @@ export const projects = [{
     {
         title: 'Online Multiplayer Game',
         category: 'Frontend, Backend, Automation',
-        image: 'public/images/projects/juego.png',
+        image: '/images/projects/juego.png',
         year: '2026',
         description: 'Juego multijugador en línea con sistema de salas, chat y sincronización de jugadores usando WebSockets y Node.js.',
         stack: ['JavaScript', 'Node.js', 'WebSockets', 'QA', 'Firebase'],
@@ -55,7 +55,7 @@ export const projects = [{
     {
         title: 'Abogado Fernando Tirado Website',
         category: 'Web Development',
-        image: 'public/images/projects/abogado.jpg',
+        image: '/images/projects/abogado.jpg',
         year: '2026',
         description: 'Página web para el Abogado Fernando Tirado.',
         stack: ['HTML', 'CSS', 'JavaScript', 'SEO', 'Astro'],
@@ -66,7 +66,7 @@ export const projects = [{
     {
         title: 'Band Website for Mar de Japón',
         category: 'Astro Website',
-        image: 'public/images/projects/mardejapon.jpg',
+        image: '/images/projects/mardejapon.jpg',
         year: '2026',
         description: 'Sitio web promocional para la banda Mar de Japón.',
         stack: ['Astro', 'JavaScript', 'CSS'],
@@ -77,7 +77,7 @@ export const projects = [{
     {
         title: 'ToDoApp',
         category: 'Mobile App',
-        image: 'public/images/projects/todoapp.jpg',
+        image: '/images/projects/todoapp.jpg',
         year: '2026',
         description: 'Aplicación To Do en Swift creada como práctica de desarrollo iOS.',
         stack: ['Swift'],
@@ -88,7 +88,7 @@ export const projects = [{
     {
         title: 'CRUD-PHP',
         category: 'Backend / CRUD',
-        image: 'public/images/projects/sersiphp.jpg',
+        image: '/images/projects/sersiphp.jpg',
         year: '2022',
         description: 'CRUD en PHP desarrollado para Grupo Alerta.',
         stack: ['PHP', 'HTML', 'CSS'],
@@ -99,7 +99,7 @@ export const projects = [{
     {
         title: 'Inventario',
         category: 'Desktop / Database App',
-        image: 'public/images/projects/manual.jpg',
+        image: '/images/projects/manual.jpg',
         year: '2020',
         description: 'Sistema de inventario desarrollado con Java y MySQL.',
         stack: ['Java', 'MySQL'],
