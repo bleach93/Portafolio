@@ -27,7 +27,7 @@ export const projects = [{
         description: 'Template para inmobiliarias con secciones de propiedades, formularios de contacto, landing pages y enfoque SEO.',
         stack: ['React', 'Astro', 'CSS', 'SEO'],
         live: 'https://homes4saledenver.com/',
-        github: '#',
+        github: '/pdfs/verification.pdf',
         featured: true
     },
     {
@@ -37,8 +37,8 @@ export const projects = [{
         year: '2022',
         description: 'Dashboard conceptual para consultar reservas, propiedades y reportes usando datos provenientes de una API externa usando la librería FullCalendar.',
         stack: ['JavaScript', 'REST API', 'Charts', 'CRM'],
-        live: '#',
-        github: '#',
+        live: '/pdfs/Tesina_PDF.pdf',
+        github: 'https://github.com/bleach93/CRUD-PHP',
         featured: true
     },
     {
