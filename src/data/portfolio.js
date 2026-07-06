@@ -66,7 +66,7 @@ export const projects = [{
     {
         title: 'Band Website for Mar de Japón',
         category: 'Astro Website',
-        image: '/images/projects/mardejapon.jpg',
+        image: '/images/projects/mar.jpg',
         year: '2026',
         description: 'Sitio web promocional para la banda Mar de Japón.',
         stack: ['Astro', 'JavaScript', 'CSS'],
@@ -88,7 +88,7 @@ export const projects = [{
     {
         title: 'CRUD-PHP',
         category: 'Backend / CRUD',
-        image: '/images/projects/sersiphp.jpg',
+        image: '/images/projects/crud.jpg',
         year: '2022',
         description: 'CRUD en PHP desarrollado para Grupo Alerta.',
         stack: ['PHP', 'HTML', 'CSS'],
