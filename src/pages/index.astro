@@ -1,0 +1,175 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+import Navbar from '../components/Navbar.jsx';
+import ProjectShowcase from '../components/ProjectShowcase.jsx';
+import SkillMarquee from '../components/SkillMarquee.jsx';
+import { achievements, experience, profile, projects, skills, stats } from '../data/portfolio.js';
+---
+
+<MainLayout title={`${profile.name} | Portfolio`} description={profile.intro}>
+  <Navbar client:load />
+
+  <main>
+    <section class="hero section-shell" id="inicio">
+      <div class="hero-orb orb-one" aria-hidden="true"></div>
+      <div class="hero-orb orb-two" aria-hidden="true"></div>
+
+      <div class="hero-copy">
+        <p class="eyebrow">{profile.availability}</p>
+        <h1>
+          {profile.name}
+          <span>{profile.role}</span>
+        </h1>
+        <p class="hero-description">{profile.intro}</p>
+
+        <div class="hero-actions">
+          <a class="primary-button" href="#proyectos">Ver Proyectos</a>
+          <a class="secondary-button" href="https://wa.me/5216691462433" target="_blank">Contactar</a>
+          <a 
+            class="secondary-button" 
+            href="/pdfs/Eduardo Soto CV.pdf" 
+            target="_blank"
+            rel="noreferrer"
+          >
+            Ver CV
+          </a>
+        </div>
+
+        <ul class="badge-row" aria-label="Tecnologías principales">
+          {profile.badges.map((badge) => <li>{badge}</li>)}
+        </ul>
+      </div>
+
+      <aside class="hero-card" aria-label="Tarjeta de perfil">
+        <div class="avatar-card">
+          <img 
+            class="avatar-photo" 
+            src="public/images/avatar.jfif" 
+            alt={`Foto de ${profile.name}`} 
+          />
+        </div>
+        <div>
+          <p class="card-kicker">Ubicación</p>
+          <h2>{profile.location}</h2>
+        </div>
+        <p>
+          Perfil híbrido entre desarrollo frontend, soporte IT, documentación y herramientas digitales para negocios.
+        </p>
+        <div class="social-row">
+          {profile.links.map((link) => (
+            <a href={link.href} target="_blank" rel="noreferrer">{link.label}</a>
+          ))}
+        </div>
+      </aside>
+    </section>
+
+    <section class="stats-grid section-shell" aria-label="Métricas profesionales">
+      {stats.map((item) => (
+        <article>
+          <strong>{item.value}</strong>
+          <span>{item.label}</span>
+        </article>
+      ))}
+    </section>
+
+    <section class="section-shell section-heading" id="proyectos">
+      <p class="eyebrow">Trabajo seleccionado</p>
+      <div class="heading-row">
+        <h2>Proyectos con enfoque visual, técnico y de negocio.</h2>
+        <p>
+          Proyectos donde combino diseño visual, desarrollo frontend y enfoque de negocio para crear experiencias web claras, funcionales y orientadas a resultados.
+        </p>
+      </div>
+      <ProjectShowcase client:visible projects={projects} />
+    </section>
+
+    <section class="split-section section-shell" id="sobre-mi">
+      <div class="section-heading compact">
+        <p class="eyebrow">Sobre mí</p>
+        <h2>Frontend con mentalidad de soporte, documentación y mejora continua.</h2>
+      </div>
+      <div class="about-panel">
+        <p>
+          Me gusta construir interfaces claras, responsivas y fáciles de mantener. Además de desarrollar, entiendo la importancia de documentar, probar, comunicar avances y resolver problemas reales para clientes o equipos internos.
+        </p>
+        <p>
+         Mi perfil combina desarrollo frontend, soporte técnico, optimización web y enfoque de negocio. He trabajado en sitios web, landing pages, sistemas internos y proyectos digitales donde la prioridad es entregar soluciones funcionales, ordenadas y orientadas a resultados.
+        </p>
+      </div>
+    </section>
+
+    <section class="section-shell skills-section" aria-label="Stack técnico">
+      <SkillMarquee client:visible skills={skills} />
+    </section>
+
+    <section class="section-shell section-heading" id="experiencia">
+      <p class="eyebrow">Trayectoria</p>
+      <div class="heading-row">
+        <h2>Experiencia organizada como timeline.</h2>
+      </div>
+
+      <div class="timeline">
+        {experience.map((job) => (
+          <article class="timeline-item">
+            <div class="timeline-date">{job.period}</div>
+            <div class="timeline-content">
+              <p class="card-kicker">{job.company}</p>
+              <h3>{job.title}</h3>
+              <p>{job.description}</p>
+              <ul class="tag-list">
+                {job.stack.map((tech) => <li>{tech}</li>)}
+              </ul>
+            </div>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="section-shell achievements-section" id="logros">
+      <div class="section-heading">
+        <p class="eyebrow">Logros</p>
+
+        <div class="heading-row">
+          <h2>Resultados que reflejan mi forma de trabajar.</h2>
+          <p>
+            Más que solo desarrollar interfaces, me enfoco en entregar sitios funcionales,
+            optimizados, documentados y alineados a objetivos reales de negocio.
+          </p>
+        </div>
+      </div>
+
+      <div class="achievement-grid">
+        {achievements.map((achievement) => (
+          <article class="achievement-card">
+            <div class="achievement-top">
+              <span class="achievement-year">{achievement.year}</span>
+              <span class="achievement-category">{achievement.category}</span>
+            </div>
+
+            <strong class="achievement-metric">{achievement.metric}</strong>
+
+            <h3>{achievement.title}</h3>
+            <p>{achievement.description}</p>
+          </article>
+        ))}
+      </div>
+    </section>
+
+    <section class="contact-section section-shell" id="contacto">
+      <p class="eyebrow">Contacto</p>
+      <h2>¿Trabajamos juntos?</h2>
+      <p>
+        Reemplaza este texto por tu propuesta de valor y enlaza tu correo, CV, LinkedIn o WhatsApp.
+      </p>
+      <div class="hero-actions centered">
+        <a class="primary-button" href={`mailto:${profile.email}`}>Enviar correo</a>
+        <a class="secondary-button" href="#inicio">Volver arriba</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>© {new Date().getFullYear()} {profile.name}</span>
+    <span>Creado con Astro + React</span>
+  </footer>
+</MainLayout>
