@@ -908,6 +908,12 @@ code {
     .section-heading {
         padding-top: 64px;
     }
+    .eyebrow {
+        text-align: center;
+    }
+    .hero h1 {
+        text-align: center;
+    }
 }
 
 .achievements-section {
